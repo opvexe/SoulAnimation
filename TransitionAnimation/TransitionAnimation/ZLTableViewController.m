@@ -47,7 +47,7 @@
 -(void)loadDataSouce{
     NSMutableArray *arrM = [NSMutableArray array];
     for (int i = 0; i < 5; i++) {
-        NSString *s = [NSString stringWithFormat:@"%@", @(i)];
+        NSString *s = [NSString stringWithFormat:@"Airbnb0%@", @(i)];
         [arrM addObject:s];
     }
     self.lists = [arrM copy];
@@ -71,9 +71,10 @@
 
 #pragma mark <ZLTableViewCellDelegate>
 -(void)collectionViewDidSelectedItemIndexPath:(NSIndexPath *)indexPath collcetionView:(UICollectionView *)collectionView forCell:(ZLTableViewCell *)cell{
- 
+    self.currentIndexPath = indexPath;
     ZLTransitionViewController *controller = [[ZLTransitionViewController alloc]init];
     self.navigationController.delegate = controller;
+    controller.imageName = self.lists[indexPath.row];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

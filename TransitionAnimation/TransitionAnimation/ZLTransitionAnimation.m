@@ -32,7 +32,7 @@
  *  动画时长
  */
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext{
-    return 0.35;
+    return 0.45;
 }
 
 /**
@@ -71,9 +71,7 @@
     [containerView addSubview:toVC.view];
     [containerView addSubview:tempView];
     //开始做动画
-    
-    
-    [UIView animateWithDuration:0.25 delay:0. options:UIViewAnimationOptionCurveEaseIn animations:^{
+    [UIView animateWithDuration:0.45 delay:0. options:UIViewAnimationOptionCurveEaseIn animations:^{
         tempView.frame = [toVC.imageView convertRect:toVC.imageView.bounds toView:containerView];
         toVC.view.alpha = 1;
     } completion:^(BOOL finished) {

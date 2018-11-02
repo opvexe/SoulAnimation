@@ -34,7 +34,7 @@
 
 -(void)setDataString:(NSString *)dataString{
     _dataString = dataString;
-    NSString *s = [NSString stringWithFormat:@"Airbnb0%@", dataString];
+    NSString *s = [NSString stringWithFormat:@"%@", dataString];
     self.coverImageView.image = [UIImage imageNamed:s];
 }
 

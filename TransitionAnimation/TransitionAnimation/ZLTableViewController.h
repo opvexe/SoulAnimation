@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZLTableViewController : UIViewController
 
+@property(nonatomic,strong)UICollectionView *collectionView;
+@property(nonatomic,strong)NSIndexPath *currentIndexPath;
+
 @end
 
 NS_ASSUME_NONNULL_END

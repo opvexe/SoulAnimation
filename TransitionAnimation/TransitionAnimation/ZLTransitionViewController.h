@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZLTransitionViewController : UIViewController<UINavigationControllerDelegate>
 
+@property(strong, nonatomic)UIImageView *imageView;
 @end
 
 NS_ASSUME_NONNULL_END

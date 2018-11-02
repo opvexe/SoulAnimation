@@ -8,6 +8,7 @@
 
 #import "ZLTransitionViewController.h"
 #import "ZLTransitionAnimation.h"
+#import <Masonry.h>
 @interface ZLTransitionViewController ()
 
 @end
@@ -16,11 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Airbnb01"]];
+    self.imageView = imageView;
+    [self.view addSubview:imageView];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.mas_equalTo(0);
+        make.height.mas_equalTo(320.0f);
+    }];
 }
-
-
-
 
 
 
